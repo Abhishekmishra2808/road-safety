@@ -1,0 +1,58 @@
+{
+  "_comment": "Road Safety Analysis Configuration - Copy to config.json and customize",
+  "frame_extraction": {
+    "fps": 1.0,
+    "method": "ffmpeg",
+    "quality": 95
+  },
+  
+  "alignment": {
+    "method": "orb",
+    "max_features": 2000,
+    "min_matches": 10
+  },
+  
+  "detection": {
+    "model": "yolov8n.pt",
+    "device": "0",
+    "imgsz": 640,
+    "confidence_threshold": 0.25,
+    "iou_threshold": 0.45,
+    "use_fp16": true,
+    "detect_markings": true,
+    "detect_potholes": true
+  },
+  
+  "matching": {
+    "iou_threshold": 0.3,
+    "same_class_only": true
+  },
+  
+  "severity": {
+    "ssim_unchanged": 0.9,
+    "ssim_minor": 0.75,
+    "ssim_moderate": 0.5,
+    "iou_unchanged": 0.7,
+    "iou_moderate": 0.3
+  },
+  
+  "reporting": {
+    "generate_evidence": true,
+    "generate_csv": true,
+    "generate_pdf": true,
+    "max_evidence_images": 50,
+    "image_quality": 90
+  },
+  
+  "performance": {
+    "max_pairs": null,
+    "batch_size": 1,
+    "num_workers": 0
+  },
+  
+  "paths": {
+    "output_base": "out",
+    "temp_dir": "temp",
+    "models_dir": "models"
+  }
+}
