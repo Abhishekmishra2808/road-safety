@@ -1,43 +1,28 @@
-# Road Safety Analysis System - Requirements
+# VisionX - Road Safety Analysis System
 # Python 3.10+
 
 # Core Computer Vision
 opencv-python>=4.8.0
-opencv-contrib-python>=4.8.0
 
 # Deep Learning - PyTorch with CUDA 11.8
 --index-url https://download.pytorch.org/whl/cu118
 torch>=2.0.0
 torchvision>=0.15.0
-torchaudio>=2.0.0
 
 # Object Detection
 ultralytics>=8.0.0
 
-# Image Processing & Metrics
+# Image Processing
 scikit-image>=0.21.0
 Pillow>=10.0.0
 
-# Video Processing
-ffmpeg-python>=0.2.0
-
 # Data Processing
 numpy>=1.24.0
-pandas>=2.0.0
 
-# Report Generation
-fpdf>=1.7.2
-
-# Web Interface
-streamlit>=1.28.0
+# Web Backend
+fastapi>=0.104.0
+uvicorn[standard]>=0.24.0
+python-multipart>=0.0.6
 
 # Utilities
 tqdm>=4.65.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
-
-# Optional: For better PDF reports
-reportlab>=4.0.0
-
-# Optional: For advanced visualization
-plotly>=5.17.0

@@ -23,7 +23,8 @@ ENV/
 *~
 .DS_Store
 
-# Output directories
+# API Jobs & Output
+api_jobs/
 out/
 output/
 results/
@@ -43,8 +44,6 @@ tmp/
 *.jpeg
 *.png
 *.bmp
-!examples/*.jpg
-!examples/*.png
 
 # Model files (large)
 *.pt
@@ -59,8 +58,6 @@ logs/
 # Reports
 *.pdf
 *.csv
-!examples/*.pdf
-!examples/*.csv
 
 # Jupyter
 .ipynb_checkpoints/
@@ -75,18 +72,16 @@ desktop.ini
 *.bak
 *.swp
 
-# Metadata
-frames_meta.json
-alignment_meta.json
-analysis_results.json
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/package-lock.json
 
-# Streamlit
-.streamlit/
-
-# pytest
+# Testing
 .pytest_cache/
 .coverage
 htmlcov/
 
-# mypy
+# Type checking
 .mypy_cache/
